@@ -46,49 +46,7 @@
         }
     </script>
 
-    <style>
-        body {
-            background-color: #000000;
-            color: #ffffff;
-        }
-        .glass {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-        .text-gradient {
-            background: linear-gradient(to right, #14b8a6, #8b5cf6, #14b8a6);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            background-size: 200% auto;
-            animation: shine 5s linear infinite;
-        }
-        @keyframes shine {
-            to { background-position: 200% center; }
-        }
-        .bg-mesh {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100%;
-            height: 100%;
-            background: 
-                radial-gradient(circle at 20% 30%, rgba(20, 184, 166, 0.08) 0%, transparent 40%),
-                radial-gradient(circle at 80% 70%, rgba(139, 92, 246, 0.08) 0%, transparent 40%);
-            filter: blur(100px);
-            z-index: -1;
-        }
-        .reveal { opacity: 0; }
-        .reveal.active { animation: reveal 0.8s cubic-bezier(0, 0, 0.2, 1) forwards; }
-
-        /* Social Brand Colors */
-        .social-tiktok:hover { background: #00f2ea !important; color: #000 !important; border-color: #ff0050 !important; }
-        .social-twitter:hover { background: #ffffff !important; color: #000 !important; }
-        .social-instagram:hover { background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%) !important; color: #fff !important; }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body class="antialiased selection:bg-kairos-teal/30">
 
@@ -96,7 +54,7 @@
     <nav class="fixed top-0 left-0 right-0 z-50 flex justify-center p-4 md:p-6 transition-transform duration-500" id="navbar">
         <div class="glass w-full max-w-7xl rounded-2xl px-6 py-3 flex items-center justify-between shadow-2xl">
             <div class="flex items-center gap-3">
-                <img src="public/logo_icon.png" alt="Kairos Logo" class="size-9 object-contain">
+                <img src="public/logo_icon.jpg" alt="Kairos Logo" class="size-9 object-contain">
                 <span class="text-2xl font-serif font-bold tracking-tight">Kairos</span>
             </div>
 
@@ -104,7 +62,10 @@
                 <a href="#features" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Features</a>
                 <a href="#testimonials" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Testimonials</a>
                 <a href="#faq" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">FAQ</a>
-                <a href="#download" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Download</a>
+                <a href="https://github.com" target="_blank" class="text-sm font-medium text-gray-400 hover:text-white transition-colors flex items-center gap-2">
+                    <i data-lucide="github" class="size-4"></i>
+                    GitHub
+                </a>
                 <a href="https://kairos-web-app.vercel.app" class="bg-white text-black hover:bg-gray-200 rounded-xl px-6 py-2.5 text-sm font-bold transition-all hover:scale-105">Launch Web App</a>
             </div>
 
@@ -119,7 +80,10 @@
                 <a href="#features" class="text-lg font-medium text-gray-400 py-2 border-b border-white/5 font-serif">Features</a>
                 <a href="#testimonials" class="text-lg font-medium text-gray-400 py-2 border-b border-white/5 font-serif">Testimonials</a>
                 <a href="#faq" class="text-lg font-medium text-gray-400 py-2 border-b border-white/5 font-serif">FAQ</a>
-                <a href="#download" class="text-lg font-medium text-gray-400 py-2 border-b border-white/5 font-serif">Download</a>
+                <a href="https://github.com" target="_blank" class="text-lg font-medium text-gray-400 py-2 border-b border-white/5 font-serif flex items-center justify-between">
+                    GitHub
+                    <i data-lucide="github" class="size-5"></i>
+                </a>
                 <a href="https://kairos-web-app.vercel.app" class="bg-kairos-teal text-white rounded-xl py-4 text-center text-lg font-bold">Launch Web App</a>
             </div>
         </div>
@@ -138,9 +102,9 @@
                 Kairos v0.1.0 — Empowering the Global Church
             </div>
             
-            <h1 class="text-6xl md:text-9xl font-serif font-normal tracking-tight mb-10 leading-[0.85]">
+            <h1 class="text-5xl md:text-9xl font-serif font-normal tracking-tight mb-10 leading-[0.85]">
                 Present your message, <br />
-                <span class="text-gradient font-sans font-bold italic">Uninterrupted.</span>
+                <span class="text-gradient font-sans font-bold italic text-6xl md:text-9xl">Uninterrupted.</span>
             </h1>
             
             <p class="text-gray-400 text-lg md:text-2xl max-w-3xl mx-auto mb-16 leading-relaxed">
@@ -163,7 +127,7 @@
             <div class="relative max-w-6xl mx-auto group reveal">
                 <div class="absolute -inset-1 bg-gradient-to-r from-kairos-teal to-kairos-purple rounded-[3.5rem] blur opacity-20 group-hover:opacity-30 transition duration-1000"></div>
                 <div class="relative glass rounded-[3.2rem] p-3 overflow-hidden shadow-2xl border border-white/10">
-                    <img src="public/dashboard_final.png" alt="Kairos Software Dashboard" class="rounded-[2.8rem] w-full shadow-inner border border-white/5">
+                    <img src="public/dashboard_preview.png" alt="Kairos Software Dashboard" class="rounded-[2.8rem] w-full shadow-inner border border-white/5">
                 </div>
             </div>
         </div>
@@ -174,7 +138,7 @@
         <div class="max-w-7xl mx-auto px-6">
             <p class="text-center text-gray-500 font-mono text-xs tracking-[0.5em] uppercase mb-16 underline underline-offset-8 decoration-kairos-teal/30">Trusted in the Pulpit</p>
             <div class="flex items-center justify-center grayscale opacity-30">
-                <img src="public/church_logos.png" alt="Partner Churches" class="h-16 md:h-24 object-contain">
+                <img src="public/church_logos.jpg" alt="Partner Churches" class="h-16 md:h-24 object-contain">
             </div>
         </div>
     </section>
@@ -210,25 +174,34 @@
                                 <p class="text-gray-500 leading-relaxed">Advanced language models that understand context and find verses even through paraphrasing.</p>
                             </div>
                         </div>
+                        <div class="flex gap-8 group">
+                            <div class="size-16 shrink-0 rounded-2xl bg-pink-500/10 flex items-center justify-center border border-pink-500/20 text-pink-500 transition-all group-hover:scale-110">
+                                <i data-lucide="music" class="size-7"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold mb-2 uppercase tracking-widest font-serif">Embedded Hymns</h4>
+                                <p class="text-gray-500 leading-relaxed">Project lyrics instantly with access to a vast, structured hymnary directly within Kairos.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="grid grid-cols-2 gap-6 relative reveal">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 relative reveal">
                     <div class="absolute inset-0 bg-kairos-teal/5 blur-[100px] rounded-full"></div>
-                    <div class="glass p-12 rounded-[3.5rem] aspect-square flex flex-col justify-end bg-kairos-teal/5 border-kairos-teal/10 relative z-10 transition-transform hover:scale-105">
-                        <div class="text-5xl font-serif font-bold mb-3">99.2%</div>
+                    <div class="glass p-10 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] aspect-square flex flex-col justify-end bg-kairos-teal/5 border-kairos-teal/10 relative z-10 transition-transform hover:scale-105">
+                        <div class="text-4xl md:text-5xl font-serif font-bold mb-3">99.2%</div>
                         <p class="text-xs text-gray-500 uppercase tracking-[0.2em] font-bold">Accuracy rate</p>
                     </div>
-                    <div class="glass p-12 rounded-[3.5rem] aspect-square flex flex-col justify-end border-white/5 relative z-10 transition-transform hover:scale-105">
-                        <div class="text-5xl font-serif font-bold mb-3">< 2s</div>
+                    <div class="glass p-10 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] aspect-square flex flex-col justify-end border-white/5 relative z-10 transition-transform hover:scale-105">
+                        <div class="text-4xl md:text-5xl font-serif font-bold mb-3">< 2s</div>
                         <p class="text-xs text-gray-500 uppercase tracking-[0.2em] font-bold">Live Latency</p>
                     </div>
-                    <div class="glass p-12 rounded-[3.5rem] aspect-square flex flex-col justify-end border-white/5 relative z-10 transition-transform hover:scale-105">
-                        <div class="text-5xl font-serif font-bold mb-3">60+</div>
+                    <div class="glass p-10 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] aspect-square flex flex-col justify-end border-white/5 relative z-10 transition-transform hover:scale-105">
+                        <div class="text-4xl md:text-5xl font-serif font-bold mb-3">60+</div>
                         <p class="text-xs text-gray-500 uppercase tracking-[0.2em] font-bold">Bible Versions</p>
                     </div>
-                    <div class="glass p-12 rounded-[3.5rem] aspect-square flex flex-col justify-end bg-kairos-purple/5 border-kairos-purple/10 relative z-10 transition-transform hover:scale-105">
-                        <div class="text-5xl font-serif font-bold mb-3">0</div>
+                    <div class="glass p-10 md:p-12 rounded-[2.5rem] md:rounded-[3.5rem] aspect-square flex flex-col justify-end bg-kairos-purple/5 border-kairos-purple/10 relative z-10 transition-transform hover:scale-105">
+                        <div class="text-4xl md:text-5xl font-serif font-bold mb-3">0</div>
                         <p class="text-xs text-gray-500 uppercase tracking-[0.2em] font-bold">Cost per month</p>
                     </div>
                 </div>
@@ -247,11 +220,11 @@
                     <p class="text-gray-400 text-xl leading-relaxed italic mb-10 flex-1">
                         "Kairos listens and brings up scriptures automatically — it's truly remarkable. It prevents technical hurdles from breaking the flow of worship."
                     </p>
-                    <div class="flex items-center gap-5 mt-auto">
-                        <div class="size-14 rounded-2xl bg-teal-500/10 flex items-center justify-center font-bold text-kairos-teal border border-kairos-teal/20">AO</div>
+                    <div class="flex items-center gap-4 mt-auto">
+                        <div class="size-12 md:size-14 rounded-2xl bg-teal-500/10 flex items-center justify-center font-bold text-kairos-teal border border-kairos-teal/20 shrink-0">AO</div>
                         <div>
-                            <div class="font-bold text-white uppercase text-sm tracking-[0.1em]">Pastor David Okunniyi</div>
-                            <div class="text-gray-500 text-xs font-mono uppercase tracking-widest">Radiant Life Church</div>
+                            <div class="font-bold text-white uppercase text-xs md:text-sm tracking-[0.1em]">Pastor David Okunniyi</div>
+                            <div class="text-gray-500 text-[10px] md:text-xs font-mono uppercase tracking-widest">Radiant Life Church</div>
                         </div>
                     </div>
                 </div>
@@ -349,6 +322,30 @@
             </div>
         </div>
     </section>
+    
+    <!-- Final CTA Section -->
+    <section class="py-24 md:py-48 relative overflow-hidden reveal">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-kairos-teal/5 to-transparent"></div>
+        <div class="max-w-5xl mx-auto px-6 text-center relative z-10">
+            <h2 class="text-5xl md:text-8xl font-serif font-bold mb-8 leading-tight">
+                Ready to transform <br /> your <span class="italic text-kairos-teal">worship?</span>
+            </h2>
+            <p class="text-gray-400 text-xl md:text-2xl max-w-2xl mx-auto mb-16">
+                Join thousands of ministries simplified by Kairos. <br class="hidden md:block" />
+                Free, open-source, and divine.
+            </p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                <a href="/downloads/Setup_Kairos_v0.1.0_x64.exe" class="w-full md:w-auto bg-white text-black hover:bg-gray-200 rounded-2xl px-12 py-6 text-xl font-bold flex items-center justify-center transition-all hover:scale-105 shadow-2xl shadow-white/10">
+                    <i data-lucide="download" class="mr-3 size-6"></i>
+                    Get Kairos for Windows
+                </a>
+                <a href="https://github.com" target="_blank" class="w-full md:w-auto glass border-white/10 hover:bg-white/5 rounded-2xl px-12 py-6 text-xl font-bold flex items-center justify-center transition-all hover:scale-105">
+                    <i data-lucide="github" class="mr-3 size-6"></i>
+                    View on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
     <footer class="pt-32 pb-16 border-t border-white/5 bg-black overflow-hidden relative">
@@ -358,7 +355,7 @@
                 <!-- Newsletter Section -->
                 <div class="md:col-span-5 reveal">
                     <div class="flex items-center gap-3 mb-8">
-                        <img src="public/logo_icon.png" alt="Logo" class="size-10">
+                        <img src="public/logo_icon.jpg" alt="Logo" class="size-10">
                         <span class="text-3xl font-serif font-bold tracking-tight">Kairos</span>
                     </div>
                     <h4 class="text-2xl font-serif font-bold mb-4 italic leading-none">Stay in touch!</h4>
@@ -377,8 +374,8 @@
                     <ul class="space-y-4 text-gray-500 font-medium text-sm">
                         <li><a href="#" class="hover:text-white transition-colors">Home</a></li>
                         <li><a href="#features" class="hover:text-white transition-colors">Features</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors">Gift Kairos</a></li>
+                        <li><a href="https://github.com" target="_blank" class="hover:text-white transition-colors">GitHub</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">License</a></li>
                     </ul>
                 </div>
 
@@ -427,61 +424,6 @@
         </div>
     </footer>
 
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-
-        // Mobile Menu Toggle
-        const menuBtn = document.getElementById('menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuIcon = document.getElementById('menu-icon');
-        let isOpen = false;
-
-        menuBtn.addEventListener('click', () => {
-            isOpen = !isOpen;
-            if (isOpen) {
-                mobileMenu.classList.remove('hidden');
-                menuIcon.setAttribute('data-lucide', 'x');
-            } else {
-                mobileMenu.classList.add('hidden');
-                menuIcon.setAttribute('data-lucide', 'menu');
-            }
-            lucide.createIcons();
-        });
-
-        // Close menu on link click
-        mobileMenu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-                isOpen = false;
-                menuIcon.setAttribute('data-lucide', 'menu');
-                lucide.createIcons();
-            });
-        });
-
-        // Intersection Observer for Reveal animations
-        const observerOptions = { threshold: 0.1 };
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-        // Scroll listener for Navbar effect
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('translate-y-[-5px]');
-                navbar.querySelector('.glass').classList.add('bg-black/80');
-            } else {
-                navbar.classList.remove('translate-y-[-5px]');
-                navbar.querySelector('.glass').classList.remove('bg-black/80');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
